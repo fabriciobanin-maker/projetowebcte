@@ -1,0 +1,83 @@
+/* Reset global: remove margens/paddings padrão e define box model consistente */
+* {
+    margin: 0; /* Remove margem padrão de todos os elementos */
+    padding: 0; /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo de largura/altura */
+    font-family: sans-serif; /* Define a fonte base do site */
+}
+
+/* Cabeçalho principal da página */
+header {
+    background-color: darkblue; /* Fundo escuro do header */
+    color: white; /* Cor do texto no header */
+    padding: 20px; /* Espaçamento interno do header */
+    display: flex; /* Ativa Flexbox para alinhar título e menu */
+    justify-content: space-between; /* Separa h1 à esquerda e nav à direita */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Menu de navegação dentro do header */
+nav {
+    display: flex; /* Coloca os itens do menu em linha */
+    gap: 16px; /* Espaço horizontal entre os itens do menu */
+}
+
+nav a {
+    color: white; /* Cor dos links do menu */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold; /* Deixa os links em negrito para destaque */
+    font-size: 1rem; /* Tamanho padrão da fonte do link */
+    transition: font-size 0.2s ease; /* Anima o aumento e a volta do tamanho */
+}
+
+nav a:hover {
+    font-size: 1.15rem; /* Aumenta a fonte ao passar o mouse */
+}
+
+.letra-destaque {
+    color: #ffcc00; /* Altere para a cor desejada */
+    font-weight: bold;
+}
+
+/* Área principal com comportamento responsivo */
+main {
+    display: flex; /* Organiza as seções com Flexbox */
+    flex-wrap: wrap; /* Permite quebrar para a linha de baixo em telas menores */
+    padding: 20px; /* Espaçamento interno da área principal */
+    gap: 20px; /* Distância entre os blocos de conteúdo */
+    padding-bottom: 60px; /* Espaço extra no fundo para não grudar no rodapé fixo */
+}
+
+/* Cartões/blocos de conteúdo */
+.conteudo {
+    flex: 1 1 300px; /* Cresce e encolhe com base mínima de 300px */
+    background-color: #f4f4f4; /* Fundo cinza claro para destacar o bloco */
+    padding: 20px; /* Espaçamento interno do bloco */
+    border-radius: 8px; /* Cantos arredondados */
+    border: 1px solid #ddd; /* Borda sutil para separar visualmente */
+    align-content: center; /* Alinha o conteúdo ao centro verticalmente */
+    text-align: center; /* Centraliza o texto dentro do bloco */
+}
+
+/* Rodapé fixo no fim da janela */
+footer {
+    background-color: #333; /* Fundo escuro do rodapé */
+    color: white; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno do rodapé */
+    position: fixed; /* Mantém o rodapé fixo na tela */
+    bottom: 0; /* Posiciona no limite inferior da janela */
+    width: 100%; /* Faz o rodapé ocupar toda a largura */
+}
+
+.divCursos {
+    /* background-color: #000000; -- Fundo cinza claro para a seção de cursos */
+    color: #0f06fa; /* Cor do texto para a seção de cursos */
+    font-size: x-large; /* Tamanho da fonte para o título "CURSOS" */
+    font-weight: bold; /* Deixa os links em negrito para destaque */
+    padding: 20px; /* Espaçamento interno da seção de cursos */
+    border-radius: 8px; /* Cantos arredondados para a seção de cursos */
+    margin-top: 20px; /* Espaço acima da seção de cursos */
+    vertical-align: middle; /* Alinha o conteúdo verticalmente ao meio */
+    text-align: center; /* Centraliza o texto dentro da seção de cursos */
+}
